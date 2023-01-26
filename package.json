@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/Alexey205/chat#readme",
   "dependencies": {
+    "crypto": "^1.0.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
     "socket.io": "^4.5.4",
     "sqlite": "^4.1.2",
     "sqlite3": "^5.1.2"

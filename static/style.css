@@ -1,0 +1,125 @@
+:root{
+    --heightHeader: 5rem;
+    --defaulColor: #1c83eb;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    }
+    
+    body{
+    height: 100vh;
+    position: relative;
+    }
+    
+    .header{
+    position: fixed;
+    width: 100%;
+    background-color: var(--defaulColor);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    }
+    
+    main{
+    position: relative;
+    height: 100vh;
+    }
+    
+    #form{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    }
+    
+    #input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    }
+    
+    .submit{
+    background-color: blue;
+    color: white;
+    padding: 0 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border: 0;
+    }
+    
+    ul{
+    list-style: none;
+    padding: 8rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    }
+    
+    li{
+    background-color: blue;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    color: white;
+    }
+
+    /*------------------ REGISTRATION --------------------------- */
+
+    .formReg{
+        padding-top: 7rem;
+        height: calc(100vh - var(--heightHeader));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .registerContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1.5rem;
+        width: 50vw;
+        background-color: var(--defaulColor);
+        border-radius: 1rem;
+    }
+
+    .formInput{
+        width: 100%;
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        border-radius: 0.5rem;
+        outline: none;
+        border: none;
+    }
+
+    .formLabel{
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .formButton{
+        background-color: #ff6f00;
+        color: white;
+        border-radius: 0.5rem;
+        border: 0;
+        padding: 0.5rem 2rem;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+
+    .formButton:hover{
+        background-color:rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+    }
+    /*-----------------------------------------------------------*/

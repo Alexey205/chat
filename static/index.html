@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header">
+                <h1>Robochat</h1>
+            </div>
+        </header>
+        <main>
+            <ul id="messages">
+                
+            </ul>
+            <form id="form">
+                <input type="text" id="input" placeholder="Enter your message...">
+                <input type="submit" class="submit" value="Send">
+            </form>
+        </main>
+    </div>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+</body>
+</html>
