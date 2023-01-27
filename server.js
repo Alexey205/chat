@@ -17,7 +17,6 @@ const authFile = fs.readFileSync(path.join(__dirname, 'static', 'auth.js'));
 const server = http.createServer((req, res)=>{
     if(req.method === 'GET') {
         switch(req.url) {
-            case '/': return res.end(indexHtmlFile);
             case '/register': return res.end(regHtmlFile);
             case '/login': return res.end(loginHtmlFile)
             case '/style.css': return res.end(styleFile);
@@ -74,7 +73,7 @@ function guarded(req, res){
 }
 
 function getCredentionals(c=''){
-    const coookies = cookie.parse(c);
+    const cookies = cookie.parse(c);
     const token = cookies?.token;
 
     if(!token || !validAuthTokens.includes(token)) return null;
@@ -132,10 +131,13 @@ io.on('connection', (socket)=>{
     })
 })
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'chat'
+io.use((socket,next)=>{
+    const cookie = socket.handshake.cookie;
+    const credentionals = getCredentionals(cookie);
+    if(!credentionals){
+        next(new Error('no auth'));
+    }
+    socket.credentionals = credentionals;
+    next();
 })
     

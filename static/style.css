@@ -23,6 +23,31 @@
     text-align: center;
     font-size: 2rem;
     padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    }
+
+    .link{
+        align-self: center;
+        position: absolute;
+        right: 10px;
+        text-decoration: none;
+        color: var(--defaulColor);
+        background-color: white;
+        border-radius: 10px;
+        padding: 5px;
+        transition: 1s;
+    }
+
+    .link:hover{
+        transition: 1s;
+        color: white;
+        background-color: lightskyblue;
+    }
+
+    button{
+        border: none;
     }
     
     main{

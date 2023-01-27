@@ -1,8 +1,21 @@
-const socket = io();
+const socket = io({
+    auth:{
+        cookie: document.cookie
+    }
+});
+
 
 const form = document.getElementById('form');
 const input = document.getElementById('input');
 const messages = document.getElementById('messages');
+const logout = document.getElementById('logout');
+
+logout.addEventListener('click', (e)=>{
+    document.cookie = 'token=; Max-Age=0';
+    location.assign('/login');
+});
+
+
 
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
@@ -19,11 +32,11 @@ socket.on('message', (msg)=>{
     window.scrollTo(0, document.body.scrollHeight);
 })
 
-function ChangeNickname(){
-    let nickname = prompt('Enter your nickname');
-    if(nickname){
-        socket.emit('setNickname', nickname);
-    }
-}
+// function ChangeNickname(){
+//     let nickname = prompt('Enter your nickname');
+//     if(nickname){
+//         socket.emit('setNickname', nickname);
+//     }
+// }
 
 ChangeNickname();

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Alexey205/chat#readme",
   "dependencies": {
+    "cookies": "^0.8.0",
     "crypto": "^1.0.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
